@@ -1,0 +1,111 @@
+/* line 58, my-icons/*.png */
+.my-icons-sprite, .my-icons-downarrow, .my-icons-star, .my-icons-uparrow, .over:after {
+  background: url('/images/my-icons-se3022c185c.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../Users/alex.kaminsky/.rvm/gems/ruby-2.0.0-p247@rails3-bootstrap-devise-cancan/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.my-icons-downarrow {
+  background-position: 0 -13px;
+  height: 11px;
+  width: 10px;
+}
+
+/* line 60, ../../../../../../../Users/alex.kaminsky/.rvm/gems/ruby-2.0.0-p247@rails3-bootstrap-devise-cancan/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.my-icons-star {
+  background-position: 0 0;
+  height: 13px;
+  width: 14px;
+}
+
+/* line 60, ../../../../../../../Users/alex.kaminsky/.rvm/gems/ruby-2.0.0-p247@rails3-bootstrap-devise-cancan/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.my-icons-uparrow {
+  background-position: 0 -24px;
+  height: 11px;
+  width: 10px;
+}
+
+/* CSS declarations go here */
+/* line 6, ../sass/sprites.scss */
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 10, ../sass/sprites.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 14, ../sass/sprites.scss */
+html, body {
+  background: #f7eacf;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 20, ../sass/sprites.scss */
+#name {
+  width: 80%;
+  display: block;
+  margin: 50px auto;
+  color: #010101;
+  height: 100px;
+  border-radius: 5px;
+  border: 0;
+  background: rgba(14, 104, 112, 0.2);
+  font-size: 70px;
+  padding: 0 5%;
+  border: 3px solid rgba(14, 104, 112, 0.5);
+}
+
+/* line 34, ../sass/sprites.scss */
+#name:focus {
+  background: rgba(14, 104, 112, 0.3);
+}
+
+/* line 38, ../sass/sprites.scss */
+input#name_submit {
+  width: 80%;
+  display: block;
+  height: 100px;
+  margin: 0 auto;
+}
+
+/* line 45, ../sass/sprites.scss */
+ul {
+  border-radius: 3px;
+  background: #fffdf9;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 52, ../sass/sprites.scss */
+li {
+  border-top: 1px solid #e8e6e1;
+  width: 100%;
+  padding: 0px 10px;
+  line-height: 40px;
+  height: 40px;
+  margin: 0;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+/* line 63, ../sass/sprites.scss */
+.name {
+  float: left;
+  font-weight: bold;
+}
+
+/* line 68, ../sass/sprites.scss */
+.score {
+  float: right;
+}
+
+/* line 72, ../sass/sprites.scss */
+.over:after {
+  content: '';
+  display: block;
+  background-position: 0 -24px;
+}

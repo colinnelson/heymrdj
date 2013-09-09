@@ -1,0 +1,76 @@
+@import "my-icons/*.png";
+@include all-my-icons-sprites(true);
+
+/* CSS declarations go here */
+
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+html, body {
+	background: #f7eacf;
+	padding: 0;
+	margin: 0;
+}
+
+#name {
+	width: 80%;
+	display: block;
+	margin: 50px auto;
+	color: #010101;
+	height: 100px;
+	border-radius: 5px;
+	border: 0;
+	background: rgba(14,104,112,.2);
+	font-size: 70px;
+	padding: 0 5%;
+	border: 3px solid rgba(14,104,112,.5);
+}
+
+#name:focus {
+	background: rgba(14,104,112,.3);
+}
+
+input#name_submit {
+	width: 80%;
+	display: block;
+	height: 100px;
+	margin: 0 auto;
+}
+
+ul {
+	border-radius: 3px;
+	background: #fffdf9;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	border-top: 1px solid #e8e6e1;
+	width: 100%;
+	padding: 0px 10px;
+	line-height: 40px;
+	height: 40px;
+	margin: 0;
+	font-size: 14px;
+	list-style-type: none;
+}
+
+.name {
+	float: left;
+	font-weight: bold;
+}
+
+.score {
+	float: right;
+}
+
+.over:after {
+	content: '';
+	display: block;
+	@include my-icons-sprite(uparrow);
+}

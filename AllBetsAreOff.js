@@ -1,4 +1,5 @@
 Scores = new Meteor.Collection("scores");
+State = new Meteor.Collection("state");
 
 if (Meteor.isClient) {
 
@@ -28,10 +29,21 @@ if (Meteor.isClient) {
     'click li': function () {
       if (SessionAmplify.equals('player', this._id)) {
               Scores.update(this._id, {$inc: {'score': 1}});
+              Scores.update(this._id, {$set: {'overunder': 'over'}});
       } else {
               Scores.update(this._id, {$inc: {'score': -1}});
+              Scores.update(this._id, {$set: {'overunder': 'under'}});
 
       }
+    }
+  });
+
+  Deps.autorun(function () {
+    Meteor.subscribe("state", State.findOne());
+    if (SessionAmplify.get('player') && typeof State.findOne() != 'undefined') {
+      $('body').empty();
+      var state = State.findOne().state;
+      $('body').append(Meteor.render(Template[state]));
     }
   });
 
@@ -58,9 +70,9 @@ if (Meteor.isClient) {
     if (!SessionAmplify.get('player')) {
       $('body').append(Meteor.render(Template.signup));
     } else if (SessionAmplify.get('admin')) {
-      $('body').append(Meteor.render(Template.admin));
+      //$('body').append(Meteor.render(Template.admin));
     } else {
-      $('body').append(Meteor.render(Template.score_card));
+      //$('body').append(Meteor.render(Template.score_card));
     }
   });
 }

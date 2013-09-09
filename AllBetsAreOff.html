@@ -1,7 +1,6 @@
 <head>
   <title>All Bets Are Off</title>
-  <script type="text/javascript" src="//use.typekit.net/aog0isk.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -21,7 +20,8 @@
 
 <template name="score">
 	<li class="{{isme}}">
-		{{name}}: {{score}}
+		<div class="name">{{name}}</div>
+    <div class="score {{overunder}}">{{score}}</div>
 	</li>
 </template>
 
@@ -42,4 +42,10 @@
     <input type="text" placeholder="Name" id="name">
     <input type="button" value="Submit" id="name_submit">
   </form>
+</template>
+
+<template name="newquestion">
+  <h1>
+    Should the table be full bleed?
+  </h1>
 </template>
