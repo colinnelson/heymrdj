@@ -189,4 +189,5 @@ li:nth-child(even) {
   background: -webkit-linear-gradient(#66cc66, #3e8c4c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 }

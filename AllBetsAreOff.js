@@ -21,7 +21,12 @@ if (Meteor.isClient) {
 
   // Returns Scores for Score Card
   Template.score_card.yourscore = function () {
-    return Scores.findOne({_id: SessionAmplify.get('player')}).score;
+    if (typeof Scores.findOne({_id: SessionAmplify.get('player')}) != 'undefined') {
+          return Scores.findOne({_id: SessionAmplify.get('player')}).score;
+    }
+    else {
+      return 0;
+    }
   }
 
   // Returns a class if the person in the score board matches
@@ -40,15 +45,6 @@ if (Meteor.isClient) {
               Scores.update(this._id, {$set: {'overunder': 'under'}});
 
       }
-    }
-  });
-
-  Deps.autorun(function () {
-    Meteor.subscribe("state", State.findOne());
-    if (SessionAmplify.get('player') && typeof State.findOne() != 'undefined') {
-      $('body').empty();
-      var state = State.findOne().state;
-      $('body').append(Meteor.render(Template[state]));
     }
   });
 
@@ -72,13 +68,6 @@ if (Meteor.isClient) {
 
   // On Startup, see where we should be
   Meteor.startup(function () {
-    if (!SessionAmplify.get('player')) {
-      $('body').append(Meteor.render(Template.signup));
-    } else if (SessionAmplify.get('admin')) {
-      //$('body').append(Meteor.render(Template.admin));
-    } else {
-      //$('body').append(Meteor.render(Template.score_card));
-    }
   });
 }
 
