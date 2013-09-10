@@ -1,25 +1,32 @@
-/* line 58, my-icons/*.png */
-.my-icons-sprite, .my-icons-downarrow, .my-icons-star, .my-icons-uparrow, .over:after {
-  background: url('/images/my-icons-se3022c185c.png') no-repeat;
+/* line 66, my-icons/*.png */
+.my-icons-sprite, .my-icons-downarrow, .my-icons-score, .my-icons-star, .my-icons-uparrow, .me .name:before, .over:before, .under:before, .score-wrap {
+  background: url('/images/my-icons-s5120d65dc9.png') no-repeat;
 }
 
 /* line 60, ../../../../../../../Users/alex.kaminsky/.rvm/gems/ruby-2.0.0-p247@rails3-bootstrap-devise-cancan/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .my-icons-downarrow {
-  background-position: 0 -13px;
+  background-position: 0 -163px;
   height: 11px;
   width: 10px;
 }
 
 /* line 60, ../../../../../../../Users/alex.kaminsky/.rvm/gems/ruby-2.0.0-p247@rails3-bootstrap-devise-cancan/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.my-icons-star {
+.my-icons-score {
   background-position: 0 0;
+  height: 150px;
+  width: 350px;
+}
+
+/* line 60, ../../../../../../../Users/alex.kaminsky/.rvm/gems/ruby-2.0.0-p247@rails3-bootstrap-devise-cancan/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.my-icons-star {
+  background-position: 0 -150px;
   height: 13px;
   width: 14px;
 }
 
 /* line 60, ../../../../../../../Users/alex.kaminsky/.rvm/gems/ruby-2.0.0-p247@rails3-bootstrap-devise-cancan/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .my-icons-uparrow {
-  background-position: 0 -24px;
+  background-position: 0 -174px;
   height: 11px;
   width: 10px;
 }
@@ -38,17 +45,31 @@
 }
 
 /* line 14, ../sass/sprites.scss */
-html, body {
+html {
   background: #f7eacf;
   padding: 0;
   margin: 0;
+  min-height: 100%;
 }
 
-/* line 20, ../sass/sprites.scss */
+/* line 21, ../sass/sprites.scss */
+body {
+  padding: 0;
+  margin: 0;
+  background: url(../images/bg.png);
+  min-height: 100%;
+}
+
+/* line 28, ../sass/sprites.scss */
+form {
+  padding-top: 100px;
+}
+
+/* line 32, ../sass/sprites.scss */
 #name {
   width: 80%;
   display: block;
-  margin: 50px auto;
+  margin: 0px auto 50px;
   color: #010101;
   height: 100px;
   border-radius: 5px;
@@ -59,12 +80,12 @@ html, body {
   border: 3px solid rgba(14, 104, 112, 0.5);
 }
 
-/* line 34, ../sass/sprites.scss */
+/* line 46, ../sass/sprites.scss */
 #name:focus {
   background: rgba(14, 104, 112, 0.3);
 }
 
-/* line 38, ../sass/sprites.scss */
+/* line 50, ../sass/sprites.scss */
 input#name_submit {
   width: 80%;
   display: block;
@@ -72,15 +93,16 @@ input#name_submit {
   margin: 0 auto;
 }
 
-/* line 45, ../sass/sprites.scss */
+/* line 57, ../sass/sprites.scss */
 ul {
   border-radius: 3px;
   background: #fffdf9;
   padding: 0;
   margin: 0;
+  border: 1px solid #e8e6e1;
 }
 
-/* line 52, ../sass/sprites.scss */
+/* line 65, ../sass/sprites.scss */
 li {
   border-top: 1px solid #e8e6e1;
   width: 100%;
@@ -90,22 +112,81 @@ li {
   margin: 0;
   font-size: 14px;
   list-style-type: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-/* line 63, ../sass/sprites.scss */
+/* line 82, ../sass/sprites.scss */
+li:nth-child(even) {
+  background: #f6f3ee;
+}
+
+/* line 86, ../sass/sprites.scss */
 .name {
   float: left;
   font-weight: bold;
 }
 
-/* line 68, ../sass/sprites.scss */
+/* line 91, ../sass/sprites.scss */
 .score {
   float: right;
 }
 
-/* line 72, ../sass/sprites.scss */
-.over:after {
+/* line 95, ../sass/sprites.scss */
+.me .name:before {
   content: '';
+  display: inline-block;
+  background-position: 0 -150px;
+  height: 13px;
+  width: 14px;
+  margin-right: 4px;
+}
+
+/* line 104, ../sass/sprites.scss */
+.over:before {
+  content: '';
+  display: inline-block;
+  background-position: 0 -174px;
+  height: 11px;
+  width: 10px;
+  margin-right: 4px;
+}
+
+/* line 113, ../sass/sprites.scss */
+.under:before {
+  content: '';
+  display: inline-block;
+  background-position: 0 -163px;
+  height: 11px;
+  width: 10px;
+  margin-right: 4px;
+}
+
+/* line 122, ../sass/sprites.scss */
+.score-wrap {
   display: block;
-  background-position: 0 -24px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 55px;
+  background-position: 0 0;
+  height: 150px;
+  width: 350px;
+}
+/* line 130, ../sass/sprites.scss */
+.score-wrap p {
+  margin: 0;
+  line-height: 10px;
+}
+/* line 134, ../sass/sprites.scss */
+.score-wrap h1 {
+  font-size: 72px;
+  margin: 0;
+  color: #66cc66;
+  background: -webkit-linear-gradient(#66cc66, #3e8c4c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

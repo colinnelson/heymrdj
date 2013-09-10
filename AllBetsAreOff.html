@@ -7,6 +7,10 @@
 </body>
 
 <template name="score_card">
+  <div class="score-wrap">
+    <p>Your Score</p>
+    <h1>{{yourscore}}</h1>
+  </div>
   <ul>
   {{#each scores}}
   		{{> score}}

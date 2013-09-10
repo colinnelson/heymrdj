@@ -19,6 +19,11 @@ if (Meteor.isClient) {
     return Scores.find({}, {sort: {score: -1, name: 1}});
   }
 
+  // Returns Scores for Score Card
+  Template.score_card.yourscore = function () {
+    return Scores.findOne({_id: SessionAmplify.get('player')}).score;
+  }
+
   // Returns a class if the person in the score board matches
   Template.score.isme = function() {
     return SessionAmplify.equals('player', this._id) ? "me" : "";
