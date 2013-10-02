@@ -7,14 +7,13 @@ var SessionAmplify = _.extend({}, Session, {
       amplify.store(key, value);
     }
   });
-
 Meteor.Router.add({
-  '/admin': 'admin', // renders template 'news'
+  '/admin': 'admin', // renders template 'admin'
   '': function(){
   	if (!SessionAmplify.get('player')) {
       return 'signup';
     } else {
-      return 'score_card';
+      return 'client_question_list';
     }
   },
   '*': 'not_found'

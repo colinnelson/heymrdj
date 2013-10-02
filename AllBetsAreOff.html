@@ -7,50 +7,126 @@
   {{renderPage}}
 </body>
 
-<template name="score_card">
-  <div class="score-wrap">
-    <p>Your Score</p>
-    <h1>{{yourscore}}</h1>
-  </div>
-  <ul>
-  {{#each scores}}
-  		{{> score}}
-  {{else}}
-    <li>
-  	 No scores yet.
-    </li>
-  {{/each}}
-  </ul>
-</template>
 
-<template name="score">
-	<li class="{{isme}}">
-		<div class="name">{{name}}</div>
-    <div class="score {{overunder}}">{{score}}</div>
-	</li>
-</template>
 
 <template name="vote">
   <div class="vote">
   </div>
 </template>
 
-<template name="admin">
-  <div class="admin">
-    <h1>Hello, admin</h1>
-  </div>
-</template>
-
 
 <template name="signup">
-  <form>
+  <form id="signup">
     <input type="text" placeholder="Name" id="name">
     <input type="button" value="Submit" id="name_submit">
   </form>
 </template>
+<template name="client_question_list">
+
+  <div class="question-wrap">
+    <div>
+    {{#each questions}}
+        {{> question_card}}
+    {{else}}
+      <div>
+       No bets yet.
+      </div>
+    {{/each}}
+    </div>
+  </div>
+  <div id="score_card">
+        {{> score_card}}    
+  </div>
+</template>
+
+
+<template name="question_card">
+  <div class="question_card">
+    <div class="question_text">{{question}}</div>
+
+  <div class="answer_buttons">
+      <div class="answer answer1" q_id="{{_id}}">
+          {{choice1}} 
+      </div>
+      <div class="answer answer2" q_id="{{_id}}">
+          {{choice2}} 
+      </div>
+  </div>
+</template>
+
+<template name="score_card">
+  <div class="score-wrap">
+    <p>Your Score</p>
+    <h1>{{yourscore}}</h1>
+  </div>
+  <ul>
+  {{#each players}}
+      {{> score}}
+  {{else}}
+    <li>
+     No scores yet.
+    </li>
+  {{/each}}
+  </ul>
+</template>
+
+<template name="score">
+  <li >
+    <div class="name">{{name}}</div>
+    <div class="score">{{score}}</div>
+  </li>
+</template>
+
+
+<template name="admin">
+  <div class="admin">
+    <h1>Hello, admin</h1>
+
+  <form>
+    <input type="text" placeholder="Question" id="question_input"><br />
+    <input type="text" placeholder="Choice1" id="choice1_input" value='Yes'>
+    <input type="text" placeholder="Choice2" id="choice2_input" value='No'>
+    <input type="button" value="Submit" id="question_submit">
+  </form>
+  </div>
+  <div id='questionList'>{{> admin_question_list}}</div>
+</template>
+
+<template name="admin_question_list">
+
+  <div class="admin_question-wrap">
+    <ul>
+    {{#each questions}}
+        {{> question_line}}
+    {{else}}
+      <li>
+       No questions yet.
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="question_line">
+  <li class="active_inactive">
+  <div class="admin_question_text">{{question}}</div>
+
+  <div class='admin_answer_buttons'>
+    <div class='admin_question_answer' choiceIndex="1" value="{{choice1}}" id="{{id}}">{{choice1}}</div>
+    <div class='admin_question_answer' choiceIndex="2" value="{{choice2}}" id="{{id}}">{{choice2}}</div>
+    
+  </div>
+  </li>
+</template>
+
 
 <template name="newquestion">
   <h1>
     Should the table be full bleed?
+  </h1>
+</template>
+<template name="not_found">
+  <h1>
+    This didn't work!
   </h1>
 </template>

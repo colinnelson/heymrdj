@@ -25,7 +25,7 @@ body {
 	min-height: 100%;
 }
 
-form {
+form#signup {
 	padding-top: 100px;
 }
 
@@ -141,3 +141,65 @@ li:nth-child(even) {
   		text-shadow: 2px 2px 2px rgba(0,0,0,.1);
 	}
 }
+
+.question_card {
+	width:300px;
+	height:500px;
+	background:#fff;
+
+}
+.question_text{
+	margin: 0 auto;
+	font-size:24px;
+}
+.question-wrap {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 55px;
+		/*@include my-icons-sprite(score);*/
+		height: my-icons-sprite-height(score);
+		width: 500px;
+		p {
+			margin: 0;
+			line-height: 10px;
+		}	
+	}
+/* admin page */
+
+	#question_input{ 
+		width:300px;
+	}
+
+	.admin_question_text{ 
+		display:inline;
+		float:left;
+	}
+	.admin_question_answer{
+		padding:5px;
+		display:inline;
+		background:#dddddd;
+		cursor:pointer;
+		
+	}
+	.admin_answer_buttons{
+		display:inline;
+		float:right;
+	}
+
+
+	.admin_question-wrap {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 55px;
+		/*@include my-icons-sprite(score);*/
+		height: my-icons-sprite-height(score);
+		width: 500px;
+		p {
+			margin: 0;
+			line-height: 10px;
+		}	
+	}
+
+	

@@ -3,28 +3,28 @@
   background: url('/images/my-icons-s5120d65dc9.png') no-repeat;
 }
 
-/* line 60, ../../../../../../../Users/alex.kaminsky/.rvm/gems/ruby-2.0.0-p247@rails3-bootstrap-devise-cancan/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .my-icons-downarrow {
   background-position: 0 -163px;
   height: 11px;
   width: 10px;
 }
 
-/* line 60, ../../../../../../../Users/alex.kaminsky/.rvm/gems/ruby-2.0.0-p247@rails3-bootstrap-devise-cancan/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .my-icons-score {
   background-position: 0 0;
   height: 150px;
   width: 350px;
 }
 
-/* line 60, ../../../../../../../Users/alex.kaminsky/.rvm/gems/ruby-2.0.0-p247@rails3-bootstrap-devise-cancan/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .my-icons-star {
   background-position: 0 -150px;
   height: 13px;
   width: 14px;
 }
 
-/* line 60, ../../../../../../../Users/alex.kaminsky/.rvm/gems/ruby-2.0.0-p247@rails3-bootstrap-devise-cancan/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .my-icons-uparrow {
   background-position: 0 -174px;
   height: 11px;
@@ -61,7 +61,7 @@ body {
 }
 
 /* line 28, ../sass/sprites.scss */
-form {
+form#signup {
   padding-top: 100px;
 }
 
@@ -190,4 +190,75 @@ li:nth-child(even) {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* line 145, ../sass/sprites.scss */
+.question_card {
+  width: 300px;
+  height: 500px;
+  background: #fff;
+}
+
+/* line 151, ../sass/sprites.scss */
+.question_text {
+  margin: 0 auto;
+  font-size: 24px;
+}
+
+/* line 155, ../sass/sprites.scss */
+.question-wrap {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 55px;
+  /*@include my-icons-sprite(score);*/
+  height: 150px;
+  width: 500px;
+}
+/* line 163, ../sass/sprites.scss */
+.question-wrap p {
+  margin: 0;
+  line-height: 10px;
+}
+
+/* admin page */
+/* line 170, ../sass/sprites.scss */
+#question_input {
+  width: 300px;
+}
+
+/* line 174, ../sass/sprites.scss */
+.admin_question_text {
+  display: inline;
+  float: left;
+}
+
+/* line 178, ../sass/sprites.scss */
+.admin_question_answer {
+  padding: 5px;
+  display: inline;
+  background: #dddddd;
+  cursor: pointer;
+}
+
+/* line 185, ../sass/sprites.scss */
+.admin_answer_buttons {
+  display: inline;
+  float: right;
+}
+
+/* line 191, ../sass/sprites.scss */
+.admin_question-wrap {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 55px;
+  /*@include my-icons-sprite(score);*/
+  height: 150px;
+  width: 500px;
+}
+/* line 199, ../sass/sprites.scss */
+.admin_question-wrap p {
+  margin: 0;
+  line-height: 10px;
 }
