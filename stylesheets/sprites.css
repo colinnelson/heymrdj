@@ -1,5 +1,5 @@
 /* line 66, my-icons/*.png */
-.my-icons-sprite, .my-icons-downarrow, .my-icons-score, .my-icons-star, .my-icons-uparrow, .me .name:before, .over:before, .under:before, .score-wrap {
+.my-icons-sprite, .my-icons-downarrow, .my-icons-score, .my-icons-star, .my-icons-uparrow {
   background: url('/images/my-icons-s5120d65dc9.png') no-repeat;
 }
 
@@ -34,7 +34,7 @@
 /* CSS declarations go here */
 /* line 6, ../sass/sprites.scss */
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
 /* line 10, ../sass/sprites.scss */
@@ -46,54 +46,61 @@
 
 /* line 14, ../sass/sprites.scss */
 html {
-  background: #f7eacf;
+  background: #222222;
   padding: 0;
   margin: 0;
   min-height: 100%;
+  max-width: 100%;
 }
 
-/* line 21, ../sass/sprites.scss */
+/* line 23, ../sass/sprites.scss */
 body {
-  padding: 0;
-  margin: 0;
-  background: url(../images/bg.png);
-  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font: 12pt Helvetica, sans-serif;
 }
 
-/* line 28, ../sass/sprites.scss */
-form#signup {
-  padding-top: 100px;
+/* line 35, ../sass/sprites.scss */
+#song_submit {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20px;
+  border: 1px solid #616261;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: arial, helvetica, sans-serif;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  display: inline-block;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #7d7e7d;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7d7e7d), to(#0e0e0e));
+  background-image: -webkit-linear-gradient(top, #7d7e7d, #0e0e0e);
+  background-image: -moz-linear-gradient(top, #7d7e7d, #0e0e0e);
+  background-image: -ms-linear-gradient(top, #7d7e7d, #0e0e0e);
+  background-image: -o-linear-gradient(top, #7d7e7d, #0e0e0e);
+  background-image: linear-gradient(to bottom, #7d7e7d, #0e0e0e);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#7d7e7d, endColorstr=#0e0e0e);
 }
 
-/* line 32, ../sass/sprites.scss */
-#name {
-  width: 80%;
-  display: block;
-  margin: 0px auto 50px;
-  color: #010101;
-  height: 100px;
-  border-radius: 5px;
-  border: 0;
-  background: rgba(14, 104, 112, 0.2);
-  font-size: 70px;
-  padding: 0 5%;
-  border: 3px solid rgba(14, 104, 112, 0.5);
+/* line 49, ../sass/sprites.scss */
+#song_submit:hover {
+  border: 1px solid #4a4b4a;
+  background-color: #646464;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#646464), to(#282828));
+  background-image: -webkit-linear-gradient(top, #646464, #282828);
+  background-image: -moz-linear-gradient(top, #646464, #282828);
+  background-image: -ms-linear-gradient(top, #646464, #282828);
+  background-image: -o-linear-gradient(top, #646464, #282828);
+  background-image: linear-gradient(to bottom, #646464, #282828);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#646464, endColorstr=#282828);
 }
 
-/* line 46, ../sass/sprites.scss */
-#name:focus {
-  background: rgba(14, 104, 112, 0.3);
-}
-
-/* line 50, ../sass/sprites.scss */
-input#name_submit {
-  width: 80%;
-  display: block;
-  height: 100px;
-  margin: 0 auto;
-}
-
-/* line 57, ../sass/sprites.scss */
+/* line 60, ../sass/sprites.scss */
 ul {
   border-radius: 3px;
   background: #fffdf9;
@@ -102,7 +109,7 @@ ul {
   border: 1px solid #e8e6e1;
 }
 
-/* line 65, ../sass/sprites.scss */
+/* line 68, ../sass/sprites.scss */
 li {
   border-top: 1px solid #e8e6e1;
   width: 100%;
@@ -120,145 +127,23 @@ li {
   user-select: none;
 }
 
-/* line 82, ../sass/sprites.scss */
+/* line 84, ../sass/sprites.scss */
+li.deleted {
+  color: #ccc;
+}
+
+/* line 88, ../sass/sprites.scss */
 li:nth-child(even) {
   background: #f6f3ee;
 }
 
-/* line 86, ../sass/sprites.scss */
+/* line 92, ../sass/sprites.scss */
 .name {
   float: left;
+}
+
+/* line 96, ../sass/sprites.scss */
+.votes {
+  float: right;
   font-weight: bold;
-}
-
-/* line 91, ../sass/sprites.scss */
-.score {
-  float: right;
-}
-
-/* line 95, ../sass/sprites.scss */
-.me .name:before {
-  content: '';
-  display: inline-block;
-  background-position: 0 -150px;
-  height: 13px;
-  width: 14px;
-  margin-right: 4px;
-}
-
-/* line 104, ../sass/sprites.scss */
-.over:before {
-  content: '';
-  display: inline-block;
-  background-position: 0 -174px;
-  height: 11px;
-  width: 10px;
-  margin-right: 4px;
-}
-
-/* line 113, ../sass/sprites.scss */
-.under:before {
-  content: '';
-  display: inline-block;
-  background-position: 0 -163px;
-  height: 11px;
-  width: 10px;
-  margin-right: 4px;
-}
-
-/* line 122, ../sass/sprites.scss */
-.score-wrap {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 55px;
-  background-position: 0 0;
-  height: 150px;
-  width: 350px;
-}
-/* line 130, ../sass/sprites.scss */
-.score-wrap p {
-  margin: 0;
-  line-height: 10px;
-}
-/* line 134, ../sass/sprites.scss */
-.score-wrap h1 {
-  font-size: 72px;
-  margin: 0;
-  color: #66cc66;
-  background: -webkit-linear-gradient(#66cc66, #3e8c4c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* line 145, ../sass/sprites.scss */
-.question_card {
-  width: 300px;
-  height: 500px;
-  background: #fff;
-}
-
-/* line 151, ../sass/sprites.scss */
-.question_text {
-  margin: 0 auto;
-  font-size: 24px;
-}
-
-/* line 155, ../sass/sprites.scss */
-.question-wrap {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 55px;
-  /*@include my-icons-sprite(score);*/
-  height: 150px;
-  width: 500px;
-}
-/* line 163, ../sass/sprites.scss */
-.question-wrap p {
-  margin: 0;
-  line-height: 10px;
-}
-
-/* admin page */
-/* line 170, ../sass/sprites.scss */
-#question_input {
-  width: 300px;
-}
-
-/* line 174, ../sass/sprites.scss */
-.admin_question_text {
-  display: inline;
-  float: left;
-}
-
-/* line 178, ../sass/sprites.scss */
-.admin_question_answer {
-  padding: 5px;
-  display: inline;
-  background: #dddddd;
-  cursor: pointer;
-}
-
-/* line 185, ../sass/sprites.scss */
-.admin_answer_buttons {
-  display: inline;
-  float: right;
-}
-
-/* line 191, ../sass/sprites.scss */
-.admin_question-wrap {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 55px;
-  /*@include my-icons-sprite(score);*/
-  height: 150px;
-  width: 500px;
-}
-/* line 199, ../sass/sprites.scss */
-.admin_question-wrap p {
-  margin: 0;
-  line-height: 10px;
 }

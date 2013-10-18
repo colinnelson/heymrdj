@@ -8,13 +8,7 @@ var SessionAmplify = _.extend({}, Session, {
     }
   });
 Meteor.Router.add({
-  '/admin': 'admin', // renders template 'admin'
-  '': function(){
-  	if (!SessionAmplify.get('player')) {
-      return 'signup';
-    } else {
-      return 'client_question_list';
-    }
-  },
+  '/heydj/dj': 'dj_view', // renders template 'dj_view'
+  '/heydj/':'client_view',  
   '*': 'not_found'
 });

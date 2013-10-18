@@ -1,0 +1,77 @@
+<head>
+  <title>Hey Mr. DeeJay</title>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+</head>
+
+<body>
+  {{renderPage}}
+</body>
+
+
+
+
+<template name="client_view">
+  <div class="client_view">
+
+    <form id="song_form" onSubmit="submitSong(); return false;">
+      <input type="text" placeholder="TITLE" id="title_input" /><br />
+      <input type="text" placeholder="ARTIST" id="artist_input" /><br />
+      <input style="display:none;" type="submit" value="Submit">
+    </form>
+  <div id="song_submit">
+    HEY MISTER DEEJAY PUT THIS RECORD ON
+  </div>
+
+  </div>
+  <div>
+    <ul id="song_list">
+    {{#each songs}}
+      <li sid="{{_id}}" class="{{status}}"> 
+        <div class="name">{{artist}} - {{title}}</div>
+        <div class="votes">{{votes}}</div>
+      </li>
+
+    {{else}}
+      <li>
+       No songs yet.
+      </li>
+    {{/each}}
+
+    {{#each deleted_songs}}
+      <li sid="{{_id}}" class="{{status}}"> 
+        <div class="name">{{artist}} - {{title}}</div>
+      </li>
+    {{/each}}
+    </ul>
+  </div>  
+</template>
+
+<template name="dj_view">
+  <div class="touchArea">
+    <ul id="song_list">
+    {{#each songs}}
+      <li sid="{{_id}}" class="{{status}}"> 
+        <div class="name">{{artist}} - {{title}}</div>
+        <div class="votes">{{votes}}</div>
+      </li>
+
+    {{else}}
+      <li>
+       No songs yet.
+      </li>
+    {{/each}}
+    {{#each deleted_songs}}
+      <li sid="{{_id}}" class="{{status}}"> 
+        <div class="name">{{artist}} - {{title}}</div>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="not_found">
+  <h1>
+    This didn't work!
+  </h1>
+</template>

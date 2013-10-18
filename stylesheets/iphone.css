@@ -1,0 +1,67 @@
+/* line 66, my-icons/*.png */
+.my-icons-sprite, .my-icons-downarrow, .my-icons-score, .my-icons-star, .my-icons-uparrow {
+  background: url('/images/my-icons-s5120d65dc9.png') no-repeat;
+}
+
+/* line 60, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.my-icons-downarrow {
+  background-position: 0 -163px;
+  height: 11px;
+  width: 10px;
+}
+
+/* line 60, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.my-icons-score {
+  background-position: 0 0;
+  height: 150px;
+  width: 350px;
+}
+
+/* line 60, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.my-icons-star {
+  background-position: 0 -150px;
+  height: 13px;
+  width: 14px;
+}
+
+/* line 60, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.my-icons-uparrow {
+  background-position: 0 -174px;
+  height: 11px;
+  width: 10px;
+}
+
+/* CSS declarations go here */
+/* line 6, ../sass/iphone.scss */
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 10, ../sass/iphone.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 14, ../sass/iphone.scss */
+html, body {
+  background: #f7eacf;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+}
+
+/*
+body {
+	padding: 0;
+	margin: 0;
+	background: url(../images/bg.png);
+	min-height: 100%;
+}
+*/
+/* line 28, ../sass/iphone.scss */
+body {
+  width: 100%;
+  font: 12pt Helvetica, sans-serif;
+}
